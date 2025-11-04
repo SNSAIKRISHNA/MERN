@@ -43,3 +43,10 @@ button:first-of-type {
 button::hover {
     cursor: pointer;   
 }
+p {
+    text-align: center;
+    font-size: 14px;
+    margin: 20px 0;
+    color: #4d4d4d;
+    font-family: Arial, sans-serif;
+}
