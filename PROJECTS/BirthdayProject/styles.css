@@ -1,33 +1,101 @@
 body {
-    font-family: "Happy Monkey", system-ui, sans-serif;
-    margin: 0;
-    
+  font-family: "Happy Monkey", system-ui, sans-serif;
+  margin: 0;
 }
 
-#bff-img{
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border-color: rgb(255, 0, 255);
-    border-style: solid;
-    border-width: 5px;
-
+#bff-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border-color: #efb0c9;
+  border-style: solid;
+  border-width: 5px;
 }
-.hero{
-    background-color: rgb(103, 207, 207);
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   
-}
-
-h2,h3,h4,h1,p {
-    text-shadow: 0px 0px 1px black
+.hero {
+  background-color: rgb(103, 207, 207);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(lightblue, #efb0c9);
 }
 
-h3,h4{
-    background-color: rgb(255, 0, 255) ;
+h2,
+h3,
+h4,
+h1,
+p {
+  text-shadow: 0px 0px 1px black;
+}
+
+#bday-age {
+  background-color: #efb0c9;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 5px 0px 10px 0px;
+}
+#bday-date {
+  background-color: #efb0c9;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.gift-image {
+  background-image: url("../Images/gold-ribbon-bow-border-frame-red-gift-wrap-background-copy-space-61498672.webp");
+  width: 400px;
+  height: 400px;
+  border: 6px solid white;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+#gift-img-happy:hover {
+  background-image: url(../Images/giphy.webp);
+  cursor: pointer;
+}
+
+#gift-img-birthday:hover {
+  background-image: url(../Images/happpy.webp);
+  cursor: pointer;
+}
+
+#gift-img-badass:hover {
+  background-image: url(../Images/badass.webp);
+  cursor: pointer;
+}
+
+#gift-img-genius:hover {
+  background-image: url(../Images/genius.webp);
+  cursor: pointer;
+}
+#gift-img-cheers {
+  height: 200px;
+  margin-bottom: 20px;
+}
+#gift-img-cheers:hover {
+  background-image: url(../Images/200.webp);
+  cursor: pointer;
+}
+.gift-section {
+  margin-top: 30px;
+  text-align: center;
+}
+.gift-title {
+  margin-bottom: 10px;
+}
+
+.gift-message {
+  margin-top: 10px;
+}
+
+.footer {
+  font-style: italic;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
 }
