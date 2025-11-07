@@ -1,10 +1,21 @@
-let Count= document.getElementById("count");
-document.getElementById("increment-btn")
+//camelcase  saiKrishna
+//pass in argument
+let countEl = document.getElementById("count")
+let saveEl = document.getElementById("save-el")
 
+let count = 0;
 
-
-
-
-function increment(){
+function increment() {
+  count  += 1;
+  countEl.textContent = count;
   
 }
+
+
+function save() {
+  let countstr = count + " - ";
+  saveEl.textContent += countstr;
+  count = 0;
+  countEl.textContent = count;
+}
+
