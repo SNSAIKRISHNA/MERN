@@ -1,21 +1,44 @@
-let firstcard = 10;
-let secondcard = 1;
-let cards = [firstcard, secondcard];
-let sum = firstcard + secondcard;
+let cards = [];
+let sum = 0;
 let hasBlackjack = false;
-let isAlive = true;
+let isAlive = false;
 let msgstr = "";
 let messageEl = document.getElementById("message-el");
-//let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 let sumEl = document.querySelector("#sum-el");
+let playerEl = document.getElementById("player-el");
+
+let player = {
+  Name: "Kirito",
+  Chips: 145,
+};
+playerEl.textContent = player.Name + ": $"+player.Chips;
+
+function getRandomcard() {
+  let randomNumber = Math.floor(Math.random() * 13) + 1;
+
+  if (randomNumber > 10) {
+    return 10;
+  } else if (randomNumber === 1) {
+    return 11;
+  } else {
+    return randomNumber;
+  }
+}
 
 function startgame() {
-    renderGame();
+  renderGame();
+  isAlive = true;
+  let firstcard = getRandomcard();
+  let secondcard = getRandomcard();
+  let sum = firstcard + secondcard;
 }
 
 function renderGame() {
-    cardsEl.textContent = "Cards: " + cards[0] + "," + cards[1]; 
+  cardsEl.textContent = "Cards: ";
+  for (let i = 0; i < cards.length; i++) {
+    cardsEl.textContent += cards[i] + " ";
+  }
   sumEl.textContent = "Sum: " + sum;
   if (sum <= 20) {
     msgstr = "did you want to draw a new card";
@@ -30,10 +53,9 @@ function renderGame() {
   messageEl.textContent = msgstr;
 }
 
-
-function newcard(){
-       let card = 6
-    sum += card
-    cards.push(card)
-    renderGame()
+function newcard() {
+  let card = getRandomcard();
+  sum += card;
+  cards.push(card);
+  renderGame();
 }
