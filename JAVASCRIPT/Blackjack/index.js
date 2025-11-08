@@ -31,6 +31,7 @@ function startgame() {
   isAlive = true;
   let firstcard = getRandomcard();
   let secondcard = getRandomcard();
+  let cards = [firstcard + secondcard]
   let sum = firstcard + secondcard;
 }
 

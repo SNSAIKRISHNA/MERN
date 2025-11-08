@@ -113,3 +113,15 @@ let course ={
   tags: ["html", "css"]
 }
 console.log(course.level)
+
+//Challenge of Object:
+let person ={
+  name: "kirito",
+  age: 21,
+  country: "india",
+
+}
+function logdata(){
+  console.log(person.name + " is " + person.age + " lives in " + person.country)
+}
+logdata()
