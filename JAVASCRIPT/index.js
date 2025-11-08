@@ -2,8 +2,31 @@ let welcomemsg = document.getElementById("welcome-el");
 let displayEl = document.getElementById("diplaycount");
 let vegan = false;
 
-//function with If else 
+//function with If else
 //And If.. elseIf...Else
+/**
+ * Processes the current dietary status and updates the UI and console accordingly.
+ *
+ * Reads the global `vegan` flag and updates the global `welcomemsg.innerText`.
+ * If `vegan` is strictly equal to true, a vegan message is logged and displayed;
+ * otherwise a non-vegan message is logged and displayed.
+ *
+ * Note: This function relies on two globals: `vegan` and `welcomemsg`. If either is
+ * undefined, a ReferenceError may be thrown when the function runs.
+ *
+ * @function process
+ * @throws {ReferenceError} If the global `vegan` or `welcomemsg` identifiers are not defined.
+ * @returns {void}
+ *
+ * @global {boolean} vegan - Global flag indicating whether the user is vegan.
+ * @global {{ innerText: string }} welcomemsg - Global DOM-like object whose innerText will be updated.
+ *
+ * @example
+ * // Example setup before calling:
+ * // let vegan = true;
+ * // let welcomemsg = document.getElementById('welcome');
+ * // process();
+ */
 function process() {
   if (vegan == true) {
     console.log("Here are the vegan foods ");
@@ -27,7 +50,7 @@ let featurepost = [
 ];
 console.log(featurepost);
 
-//Array with for loop 
+//Array with for loop
 //Create a element of li
 
 let menu = ["Idly", "Chicken", "dosa", "puri"];
@@ -75,61 +98,86 @@ function rolldice() {
   let reandomNumber3 = Math.floor(Math.random() * 6) + 1;
   console.log(reandomNumber3);
 }
-console.log( rolldice() )
-
+console.log(rolldice());
 
 //Loggical Operator (AND) and ( OR)
 
 let hascompleted = true;
 let givecertificate = true;
 
-if(hascompleted === true && givecertificate == true ){
-  generatecertificate()
+if (hascompleted === true && givecertificate == true) {
+  generatecertificate();
 }
-function generatecertificate(){
-  console.log("Show solution")
+function generatecertificate() {
+  console.log("Show solution");
 }
 
 // logical OR opreator
 let hascompleted1 = false;
 let givecertificate1 = true;
 
-if(hascompleted1 === true || givecertificate1 == true ){
-  generatecertificate()
+if (hascompleted1 === true || givecertificate1 == true) {
+  generatecertificate();
 }
-function generatecertificate(){
-  console.log("Show solution")
+function generatecertificate() {
+  console.log("Show solution");
 }
 
 //Objects in JavaScript:
-//Key value pair 
+//Key value pair
 
-let course ={
+let course = {
   title: "Js Basics",
-  creator : "Kirito",
+  creator: "Kirito",
   level: 1,
-  length : 63,
+  length: 63,
   isfree: false,
-  tags: ["html", "css"]
-}
-console.log(course.level)
+  tags: ["html", "css"],
+};
+console.log(course.level);
 
 //Challenge of Object:
-let person ={
+let person = {
   name: "kirito",
   age: 21,
   country: "india",
-
+};
+function logdata() {
+  console.log(
+    person.name + " is " + person.age + " lives in " + person.country
+  );
 }
-function logdata(){
-  console.log(person.name + " is " + person.age + " lives in " + person.country)
+logdata();
+
+//AddEventListener
+
+let buttonEl = document.getElementById("open-btn");
+
+buttonEl.addEventListener("click", function () {
+  console.log("I want to  open the open ");
+});
+
+//.innerHTML
+
+function open() {
+  displayEl.innerHTML += "<p>" + "Here is your Menu" + "</p>";
 }
-logdata()
 
-//AddEventListener 
+//CreateElement
 
-let buttonEl = document.getElementById("open-btn")
+function createElement() {
+  const li = document.createElement("li");
+  li.textContent = myleeds[i];
+  ulEl.append(li);
+}
 
-buttonEl.addEventListener("click", function(){
-  console.log("I want to  open the open ")
-})
+//templateStrings (` `) this is templatestring symbol
+// we can break the templatestring into multiple lines but we cannot break it in normal string
+
+const name = "kirito";
+const sender = "sai"
+const email = `hey ${name} ! How are you ( sender=${sender} )`
+console.log(email)
+
+//this is normal string 
+listItem += "<li><a target= '_blank' href='" + myleeds[i]+"' >" + myleeds[i] + " </li></a>";
