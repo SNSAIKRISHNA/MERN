@@ -125,3 +125,11 @@ function logdata(){
   console.log(person.name + " is " + person.age + " lives in " + person.country)
 }
 logdata()
+
+//AddEventListener 
+
+let buttonEl = document.getElementById("open-btn")
+
+buttonEl.addEventListener("click", function(){
+  console.log("I want to  open the open ")
+})
