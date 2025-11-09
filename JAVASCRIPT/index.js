@@ -157,6 +157,10 @@ buttonEl.addEventListener("click", function () {
   console.log("I want to  open the open ");
 });
 
+//Double click in addEventlistener (dblclick)
+deleteBtn.addEventListener("dblclick", function (){
+  console.log("double clicked")
+})
 //.innerHTML
 
 function open() {
@@ -175,9 +179,44 @@ function createElement() {
 // we can break the templatestring into multiple lines but we cannot break it in normal string
 
 const name = "kirito";
-const sender = "sai"
-const email = `hey ${name} ! How are you ( sender=${sender} )`
-console.log(email)
+const sender = "sai";
+const email = `hey ${name} ! How are you ( sender=${sender} )`;
+console.log(email);
 
-//this is normal string 
-listItem += "<li><a target= '_blank' href='" + myleeds[i]+"' >" + myleeds[i] + " </li></a>";
+//this is normal
+function heloo(){
+//**  listItem +=
+"<li><a target= '_blank' href='" +
+  myleeds[i] +
+  "' >" +
+  myleeds[i] +
+  " </li></a>";
+}
+//Localstorage in JavaScript
+//.getItem && .setItem
+//.clear
+
+//localStorage.setItem();
+function leeds() {
+  localStorage.setItem("name", "Kirito");
+  //localStorage.getItem();
+  console.log(localStorage.getItem("name"));
+  //localStorage.clear();
+  localStorage.clear();
+
+  //JSON parse && stringify
+  myleeds = JSON.parse(myleeds);
+  myleeds = JSON.stringify(myleeds);
+}
+//Truthy and Falsy Values
+
+//falsy values:
+// false
+// 0
+// ""
+// null --> how we ("developer signalize") the [ let currentViewers = null ];
+// undefined --> how ("Js signalize") the  [let currentViewers];
+// NaN
+
+let trueorfalse = Boolean("");
+console.log("falsy:", trueorfalse);

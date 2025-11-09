@@ -16,8 +16,9 @@ button {
   color: white;
   margin-top: 10px;
   padding: 10px 20px 10px 20px;
-  border: none;
+  border: 1px solid #5f9341;
   font-weight: bold;
+  min-width: 400px;
 }
 
 ul {
@@ -31,5 +32,11 @@ li {
 }
 
 li a {
+  color: #4a9120;
+}
+
+
+#delete-btn{
+  background-color: white;
   color: #4a9120;
 }
