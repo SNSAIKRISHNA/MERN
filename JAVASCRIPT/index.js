@@ -158,9 +158,9 @@ buttonEl.addEventListener("click", function () {
 });
 
 //Double click in addEventlistener (dblclick)
-deleteBtn.addEventListener("dblclick", function (){
+// deleteBtn.addEventListener("dblclick", function (){
   console.log("double clicked")
-})
+  //})
 //.innerHTML
 
 function open() {
@@ -220,3 +220,20 @@ function leeds() {
 
 let trueorfalse = Boolean("");
 console.log("falsy:", trueorfalse);
+
+//function and parameter 
+//we can pass any datatype to paremeter 
+
+//               paremeters
+function greet(name, age , sex){
+  welcomemsg.textContent =`Hello ${name} is ${age} old and ${sex} of gender `
+}
+//         arguments
+greet("Kiris",21,"male")
+
+
+function getFirst(arr){
+  console.log( arr[0])
+}
+
+getFirst([1,2,3,4,5])
