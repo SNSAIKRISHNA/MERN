@@ -255,18 +255,43 @@ function selectItem(item) {
     case "Coffee":
       price = 2;
       break;
-    case "Tea" :
-      price = 3
+    case "Tea":
+      price = 3;
       break;
-    case "salad" :
-      price = 5
-      break
+    case "salad":
+      price = 5;
+      break;
     case "sandwitch":
-      price = 10
+      price = 10;
       break;
     default:
-      return `we don't see the ${item}`
+      return `we don't see the ${item}`;
   }
   return `You have Selected ${item}. That will be $${price}`;
 }
 console.log(selectItem("salad"));
+
+//Object Destructuring
+
+const favouritemovie = {
+  title: "top-gun-mavrick",
+  year: "1986",
+  genre: "action",
+  star: "Tom Cruise",
+};
+const { title, year, genre, star } = favouritemovie;
+console.log(title);
+
+//setTimeout() and setInterval()
+
+function displayTrafficlight(light) {
+  console.log("The light is now:" + light);
+}
+setTimeout(displayTrafficlight, 3000, "red");
+
+
+// Import and Export and Export default in JavaScript
+// export { myleeds };
+// import { myleeds } from "./myleeds.js";
+
+//contructor function in JavaScript
