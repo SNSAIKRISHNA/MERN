@@ -289,9 +289,64 @@ function displayTrafficlight(light) {
 }
 setTimeout(displayTrafficlight, 3000, "red");
 
-
 // Import and Export and Export default in JavaScript
 // export { myleeds };
 // import { myleeds } from "./myleeds.js";
 
-//contructor function in JavaScript
+//contructor function in JavaScript (used very rarely)
+
+/* The constructor function is a special type of function in JavaScript that is used to create and initialize objects. 
+   It is typically defined using the function keyword and is called using the new keyword. When a constructor function is called with new, 
+   it creates a new object and sets the value of this inside the function to refer to that new object.
+   Constructor functions are often used to create multiple instances of similar objects with shared properties and methods. 
+*/
+
+//String()
+//Number()
+//Array()
+//Object()
+//Boolean()
+
+//Date Object in JavaScript
+const datsnapshot = new Date();
+console.log(datsnapshot.getFullYear().toString());
+
+// Error construtctor in JavaScript
+
+function validateAge(age) {
+  if (age) {
+    console.log(age);
+  } else {
+    throw new Error("Enter age");
+  }
+}
+validateAge(21);
+
+// ++Pre increment Operator(++i) and Post increment Operator(i++)
+
+//pre-increment
+let a = 5;
+function calculate() {
+  let b = ++a; //<--pre-increment
+  let c = a++; //<--post-increment
+  return b, c;
+}
+console.log(calculate());
+
+//Numeric Separators in JavaScript( _  <-- this is numeric separator)
+let budget = 5109_222_050_55;
+console.log(budget);
+
+//BigInt in JavaScript
+
+// BigInt is a built-in object in JavaScript that provides a way to represent whole numbers larger than 2^53 - 1, 
+// which is the largest number JavaScript can reliably represent with the Number primitive. BigInt can be used for arbitrarily large integers,
+//  making it useful for applications that require precise calculations with very large numbers, such as cryptography or scientific computing.
+
+let budget1 = BigInt(5109_222_050_55);
+console.log(budget1);
+
+//Hoisting in JavaScript
+// Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compilation phase,
+// before the code is executed. This means that you can use variables and functions before they are declared in the code.
+
