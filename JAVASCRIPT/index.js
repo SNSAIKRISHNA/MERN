@@ -350,3 +350,10 @@ console.log(budget1);
 // Hoisting is a JavaScript mechanism where variables and function declarations are moved to the top of their containing scope during the compilation phase,
 // before the code is executed. This means that you can use variables and functions before they are declared in the code.
 
+//Arrow Functions in JavaScript
+// Arrow functions provide a concise syntax for writing functions in JavaScript. 
+// They are often used for short, single-line functions or as callbacks.
+const hello = (name,age) => {
+  console.log(`Hello ${name}, you are ${age} years old.`);
+}
+hello("kirito",21);
