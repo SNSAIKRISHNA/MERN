@@ -159,8 +159,8 @@ buttonEl.addEventListener("click", function () {
 
 //Double click in addEventlistener (dblclick)
 // deleteBtn.addEventListener("dblclick", function (){
-  console.log("double clicked")
-  //})
+console.log("double clicked");
+//})
 //.innerHTML
 
 function open() {
@@ -184,13 +184,13 @@ const email = `hey ${name} ! How are you ( sender=${sender} )`;
 console.log(email);
 
 //this is normal
-function heloo(){
-//**  listItem +=
-"<li><a target= '_blank' href='" +
-  myleeds[i] +
-  "' >" +
-  myleeds[i] +
-  " </li></a>";
+function heloo() {
+  //**  listItem +=
+  "<li><a target= '_blank' href='" +
+    myleeds[i] +
+    "' >" +
+    myleeds[i] +
+    " </li></a>";
 }
 //Localstorage in JavaScript
 //.getItem && .setItem
@@ -221,19 +221,52 @@ function leeds() {
 let trueorfalse = Boolean("");
 console.log("falsy:", trueorfalse);
 
-//function and parameter 
-//we can pass any datatype to paremeter 
+//function and parameter
+//we can pass any datatype to paremeter
 
 //               paremeters
-function greet(name, age , sex){
-  welcomemsg.textContent =`Hello ${name} is ${age} old and ${sex} of gender `
+function greet(name, age, sex) {
+  welcomemsg.textContent = `Hello ${name} is ${age} old and ${sex} of gender `;
 }
 //         arguments
-greet("Kiris",21,"male")
+greet("Kiris", 21, "male");
 
-
-function getFirst(arr){
-  console.log( arr[0])
+function getFirst(arr) {
+  console.log(arr[0]);
 }
 
-getFirst([1,2,3,4,5])
+getFirst([1, 2, 3, 4, 5]);
+
+///Advance of JavaScript
+
+//Ternary Operator (condition ? expression : expression )
+
+const ex = 200;
+const messsage2 =
+  ex < 30 ? "You  need to try " : ex < 30 ? "Done Good" : "Excellent";
+console.log(messsage2);
+
+//Switch Statement:
+
+function selectItem(item) {
+  let price = 0;
+
+  switch (item) {
+    case "Coffee":
+      price = 2;
+      break;
+    case "Tea" :
+      price = 3
+      break;
+    case "salad" :
+      price = 5
+      break
+    case "sandwitch":
+      price = 10
+      break;
+    default:
+      return `we don't see the ${item}`
+  }
+  return `You have Selected ${item}. That will be $${price}`;
+}
+console.log(selectItem("salad"));
