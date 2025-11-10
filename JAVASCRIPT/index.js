@@ -339,7 +339,7 @@ console.log(budget);
 
 //BigInt in JavaScript
 
-// BigInt is a built-in object in JavaScript that provides a way to represent whole numbers larger than 2^53 - 1, 
+// BigInt is a built-in object in JavaScript that provides a way to represent whole numbers larger than 2^53 - 1,
 // which is the largest number JavaScript can reliably represent with the Number primitive. BigInt can be used for arbitrarily large integers,
 //  making it useful for applications that require precise calculations with very large numbers, such as cryptography or scientific computing.
 
@@ -351,9 +351,32 @@ console.log(budget1);
 // before the code is executed. This means that you can use variables and functions before they are declared in the code.
 
 //Arrow Functions in JavaScript
-// Arrow functions provide a concise syntax for writing functions in JavaScript. 
+// Arrow functions provide a concise syntax for writing functions in JavaScript.
 // They are often used for short, single-line functions or as callbacks.
-const hello = (name,age) => {
-  console.log(`Hello ${name}, you are ${age} years old.`);
-}
-hello("kirito",21);
+const hello = (name, age) => {
+  if (age > 18) {
+    console.log(`Hello ${name}, you are ${age} years old.`);
+  } else {
+    console.log(`Hello ${name}, you are underaged.`);
+  }
+};
+hello("kirito", 12);
+
+//Arrow Function Challenge
+
+const fast = (speed, limit) => {
+  if (speed <= limit) {
+    return `You are driving safe at ${speed} km/h`;
+  } else {
+    return `You are driving too fast at ${speed} km/h`;
+  }
+};
+console.log(fast(100, 80));
+
+//Arrow function with Array map method
+const arr = [267, 345, 123, 456, 789];
+
+const distanceTravelled = arr.map((distance) => {
+  return Math.round(distance * 1.6);
+});
+console.log(distanceTravelled);
