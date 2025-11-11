@@ -21,6 +21,8 @@ An **API (Application Programming Interface)** is a set of rules and protocols t
   : could contain the resource (HTML, JSON, data, etc..)
   : Could contain a response saying the client isn't authorized to receive the resource
 
+<img width="853" height="359" alt="images" src="https://github.com/user-attachments/assets/88da559b-1c3a-4144-966d-225fb885caa2" />
+
 ### Common Uses
 
 - Retrieving data from a server
