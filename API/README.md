@@ -21,6 +21,7 @@ An **API (Application Programming Interface)** is a set of rules and protocols t
   : could contain the resource (HTML, JSON, data, etc..)
   : Could contain a response saying the client isn't authorized to receive the resource
 
+<<<<<<< HEAD
 ## JSON : ##
     - JSON (JavaScript Object Notation) is a lightweight, text-based format for structuring data. It is language-independent and commonly used for API request and response bodies.
     - Content type: application/json
@@ -67,6 +68,9 @@ Example:
 - **Error Handling**: APIs should return appropriate HTTP status codes and error messages for failed requests.
 
 
+=======
+<img width="853" height="359" alt="images" src="https://github.com/user-attachments/assets/88da559b-1c3a-4144-966d-225fb885caa2" />
+>>>>>>> 0eaa19592667b487e9fd82e8a3d2141ce4fe36e5
 
 ### Common Uses
 
