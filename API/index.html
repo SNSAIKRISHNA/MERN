@@ -4,11 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <h1> Coinbase Price</h1>
-    <h5 id="btc-price"></h5>
-    <button id="btn" onclick="updatePrice()">Get BTC Price</button>
-    <script  src="index.js"></script>
+    <div id="container">
+      <h1><span id="crypto-name">Bitcoin</span> Price</h1>
+      <h5 id="btc-price">
+        <span id="price-label">Current Bitcoin Price</span>
+        <span id="price-value"></span>
+      </h5>
+      <button id="btn" onclick="updatePrice()">Get BTC Price</button>
+      <p id="info">
+        <span id="p-span"
+          >Bitcoin is more than digital money. It represents a new financial era
+          built on decentralization, transparency, and global
+          accessibility.</span
+        >
+        Its value rises and falls with the rhythm of the market, reflecting the
+        beliefs and emotions of millions of people watching the future unfold in
+        real-time.
+      </p>
+    </div>
+
+    <script src="index.js"></script>
   </body>
 </html>
