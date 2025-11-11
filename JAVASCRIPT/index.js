@@ -380,3 +380,41 @@ const distanceTravelled = arr.map((distance) => {
   return Math.round(distance * 1.6);
 });
 console.log(distanceTravelled);
+
+//REST Parameters in JavaScript
+// REST parameters allow a function to accept an indefinite number of arguments as an array,
+// providing a way to represent variadic functions in JavaScript.
+
+function setPermission(permission1, ...names) {
+  names.forEach((name) => {
+    console.log(`${name} has ${permission1} permission`);
+  });
+}
+setPermission("admin", "kirito", "sai", "asuna");
+
+//Challenge Template string in index.html
+
+function getLabelsHtml(text, sender1, ...staff) {
+  return (lablesHtml = staff
+    .map(
+      (staff) => `<div class="label-card">
+          <p>Dear ${staff.name},</p>
+         <p>${text}</p>
+         <p> Best regards, </p>
+          <p>${sender1}</p>
+       </div>`
+    )
+    .join(""));
+}
+
+const text = "Wishing you a joyous holiday season and a prosperous New Year!";
+const sender1 = "Kirito";
+
+document.getElementById("label-container").innerHTML = getLabelsHtml(
+  text,
+  sender1,
+  { name: "Asuna" },
+  { name: "Sai" },
+  { name: "Krishna" },
+  { name: "Anhsirk" }
+);

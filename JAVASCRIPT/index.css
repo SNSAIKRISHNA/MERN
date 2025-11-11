@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+#welcome-el {
+    color: #555;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#label-container {
+    margin-top: 20px;
+}
+#label-container {
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+     width: 100%;
+    
+}
+
+.label-card {
+    flex: 0 0 calc(50% - 10px); /* 2 cards side by side with space */
+    margin: 5px;
+    background-color: white; 
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+   
+}
