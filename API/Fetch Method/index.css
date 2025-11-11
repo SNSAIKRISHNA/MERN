@@ -1,0 +1,21 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #27292c;
+    color: white;
+}
+
+#img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
