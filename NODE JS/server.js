@@ -1,29 +1,52 @@
-import http from "node:http";
-import { getDataFromDB } from "./Database/db.js";
 
-const PORT = 8000;
+import http from 'node:http'
+import { getDataFromDB } from './Database/db.js'
+import { sendJSONResponse } from './utils/sendJSONResponse.js'
+import { getDataByPathParams } from './utils/getDataByPathParams.js'
+import { getDataByQueryParams } from './utils/getDataByQueryParams.js'
+
+const PORT = 8000
 
 const server = http.createServer(async (req, res) => {
-  const destination = await getDataFromDB();
-  if (req.url === "/") {
-    res.setHeader("Content-Type", "application/json");
-    res.statusCode = 200;
-    res.end(JSON.stringify(destination));
-  } else if (req.url.startsWith("/continent") && req.method === "GET") {
-    const continent = req.url.split("/").pop();
-    const filteredDestinations = destination.filter((destination) => {
-      return destination.continent.toLowerCase() === continent.toLowerCase();
-    });
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "application/json");
-    res.end(JSON.stringify(filteredDestinations));
-  } else {
-    res.statusCode = 404;
-    res.setHeader("Content-Type", "application/json");
-    res.end(JSON.stringify({ message: "Route not found" }));
-  }
-});
+  const destinations = await getDataFromDB()
 
-server.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}...`);
-});
+  const urlObj = new URL(req.url, `http://${req.headers.host || 'localhost:8000'}`)
+
+  const queryObj = Object.fromEntries(urlObj.searchParams)
+
+  if (urlObj.pathname === '/api' && req.method === 'GET') {
+    
+    let filteredData = destinations
+  
+    if (Object.keys(queryObj).length > 0) {
+      filteredData = getDataByQueryParams(destinations, queryObj)
+    }
+
+    sendJSONResponse(res, 200, filteredData)
+
+  } else if (req.url.startsWith('/api/continent') && req.method === 'GET') {
+
+    const continent = req.url.split('/').pop()
+    const filteredData = getDataByPathParams(destinations, 'continent', continent)
+    sendJSONResponse(res, 200, filteredData)
+
+  } else if (req.url.startsWith('/api/country') && req.method === 'GET') {
+
+    const country = req.url.split('/').pop()
+    const filteredData = getDataByPathParams(destinations, 'country', country)
+    sendJSONResponse(res, 200, filteredData)
+
+  } 
+  
+  else {
+
+    res.setHeader('Content-Type', 'application/json')
+    sendJSONResponse(res, 404, ({
+      error: "not found",
+      message: "The requested route does not exist"
+    }))   
+
+  }
+})
+
+server.listen(PORT, () => console.log(`Connected on port: ${PORT}`))
