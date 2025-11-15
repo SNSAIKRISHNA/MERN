@@ -1,7 +1,9 @@
-** DATABASES (DB) **
- | Databases are used in software application to store, manage, and retrieve data                   |
- | Storage is persistent, meaning it is preserved in between user visits and across the application |
- | DB can offer a structured way to store data often within tables                                  |
- | Different data types can be stored and enforced in DB                                            |
- | Every DB will have schema which defines the shape of the data within it                          |
- 
+## 🗄️ Databases (DB)
+
+| Concept | Description |
+|----------|-------------|
+| **Purpose** | Databases are used in software applications to store, manage, and retrieve data. |
+| **Persistence** | Storage is persistent — data is preserved between user visits and across the application. |
+| **Structure** | Databases offer a structured way to store data, often within tables. |
+| **Data Types** | Different data types can be stored and enforced in a database. |
+| **Schema** | Every database has a schema that defines the shape and structure of the data within it. |
