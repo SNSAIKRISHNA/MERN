@@ -1,0 +1,15 @@
+{
+  "name": "database",
+  "version": "1.0.0",
+  "description": "| Concept | Description |\r |----------|-------------|\r | **Purpose** | Databases are used in software applications to store, manage, and retrieve data. |\r | **Persistence** | Storage is persistent — data is preserved between user visits and across the application. |\r | **Structure** | Databases offer a structured way to store data, often within tables. |\r | **Data Types** | Different data types can be stored and enforced in a database. |\r | **Schema** | Every database has a schema that defines the shape and structure of the data within it. |",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@electric-sql/pglite": "^0.3.14"
+  }
+}
