@@ -9,9 +9,13 @@ import Footer from "./Components/Footer.jsx";
 function App() {
   return (
     <div className="App">
-    <NavBar />
-    <Body />
-    <Footer />
+      <NavBar
+        docs="https://react.dev/learn" // Updated to React's official docs site using the props
+        about="https://react.dev/"    //
+        community="https://react.dev/community"
+      />
+      <Body />
+      <Footer />
     </div>
   );
 }
