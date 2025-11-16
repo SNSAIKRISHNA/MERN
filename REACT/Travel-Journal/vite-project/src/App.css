@@ -1,0 +1,116 @@
+/* ===== unified CSS for your React component ===== */
+
+html, body {
+  margin: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+/* page container */
+.container {
+  margin: 45px 40px;
+}
+
+/* header bar */
+header {
+  background: #F55A5A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 55px;
+}
+
+header > img {
+  width: 24px;
+  margin-right: 7px;
+}
+
+header > h1 {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* --- Place card (was article.journal-entry) --- */
+.place-card {
+  display: flex;
+  margin-bottom: 36px;
+  align-items: flex-start;
+}
+
+/* marker icon (you use markerImg) */
+.place-card .marker {
+  width: 7px;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+/* main image container (matches JSX .main-img-container) */
+.place-card .main-img-container {
+  width: 125px;
+  height: 168px;
+  overflow: hidden;
+  border-radius: 5px;
+  flex-shrink: 0;
+  margin-right: 19px;
+}
+
+/* actual image inside container (matches JSX .main-img) */
+.place-card .main-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* right-side info (wraps title, paragraphs, links) */
+.place-card .info-container {
+  display: block;
+  color: #2B283A;
+  max-width: 760px;
+}
+
+/* country label */
+.info-container span.country {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  margin-right: 12px;
+  display: inline-block;
+}
+
+/* link styling */
+.info-container a {
+  color: #2B283A;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.info-container a:visited {
+  color: #918E9B;
+}
+
+/* title */
+.info-container h2.entry-title {
+  margin-top: 7px;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+/* bold small meta line */
+.info-container p.trip-dates {
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+/* body/excerpt text */
+.info-container p.entry-text {
+  line-height: 1.5;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;  
+  overflow: hidden;
+  margin: 6px 0 0;
+}
