@@ -1,7 +1,6 @@
 import "./App.css";
 import Places from "./Component/Places";
 import Header from "./Component/Header";
-import Fuji from "./assets/mountfuji.avif";
 import data from "./data.js";
 
 function App() {
@@ -20,6 +19,7 @@ function App() {
   return (
     <>
       <Header />
+      <h1 className="h1-txt">The Places I've Visited</h1>
       {enteyElements}
     </>
   );

@@ -1,7 +1,7 @@
 import markerImg from "../assets/marker.png";
 
 function Places(props) {
-  console.log(props);
+ 
   return (
     <article className="place-card">
       <div className="main-img-container">
@@ -16,7 +16,7 @@ function Places(props) {
         <div className="location-row">
           <img className="marker" src={markerImg} alt="Marker" />
           <span className="country">{props.country}</span>
-          
+
           <a
             href={`https://en.wikipedia.org/wiki/${props.country}`}
             target="_blank"

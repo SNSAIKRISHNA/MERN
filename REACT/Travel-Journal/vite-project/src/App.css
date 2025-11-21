@@ -133,3 +133,9 @@ header > h1 {
   line-height: 1.5;
 }
 
+.h1-txt {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0;
+}

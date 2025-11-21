@@ -33,5 +33,15 @@ export default [
         country: "Norway",
         dates: "01 Oct, 2021 - 18 Nov, 2021",
         text: "The Geiranger Fjord is a fjord in the Sunnmøre region of Møre og Romsdal county, Norway. It is located entirely in the Stranda Municipality."
+    }, {
+        id: 4,
+        img: {
+            src: "https://lh3.googleusercontent.com/gps-cs-s/AG0ilSx3nvE9d5lV3CGe-SCGhqy-dyispbJzRLwUNR7AYj_FVxoXkqPzU9u5AYzyW5miY6XtOGiZ5-qmuZjLU-KlVF-XTOeLtoHbHwcsuX8LW29Zkkk_FgNqV1M1qBs_xrtQPktwVytr=w270-h156-n-k-no",
+            alt: "Colosseum"
+        },
+        title: "Colosseum",
+        country: "Italy",
+        dates: "15 Aug, 2021 - 30 Aug, 2021",
+        text: "The Colosseum is an ancient amphitheater in Rome, Italy. It is one of the greatest works of Roman architecture and engineering."
     }
 ];
