@@ -1,21 +1,37 @@
-/* ===== unified CSS for your React component ===== */
+/* ===== GLOBAL ===== */
 
-html, body {
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
   margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: #f5f5f7;
+  color: #2b283a;
 }
 
-/* page container */
-.container {
-  margin: 45px 40px;
+/* Optional wrapper if you use it */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* header bar */
+.main {
+  padding: 32px 16px 48px;
+}
+
+/* ===== NAVBAR (same style as before) ===== */
+
 header {
-  background: #F55A5A;
+  background: #f55a5a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,84 +49,87 @@ header > h1 {
   font-weight: 500;
 }
 
-/* --- Place card (was article.journal-entry) --- */
+/* ===== PLACE CARD ===== */
+
 .place-card {
   display: flex;
-  margin-bottom: 36px;
+  gap: 20px;
   align-items: flex-start;
+  background: #bbbbbbaf;
+  border-radius: 12px;
+  padding: 18px 20px;
+  max-width: 900px;
+  margin: 24px auto;
+  color: rgb(0, 0, 0);
 }
 
-/* marker icon (you use markerImg) */
-.place-card .marker {
-  width: 7px;
-  margin-right: 8px;
-  flex-shrink: 0;
-}
-
-/* main image container (matches JSX .main-img-container) */
-.place-card .main-img-container {
-  width: 125px;
-  height: 168px;
+/* main image container */
+.main-img-container {
+  width: 160px;
+  height: 210px;
   overflow: hidden;
-  border-radius: 5px;
+  border-radius: 10px;
   flex-shrink: 0;
-  margin-right: 19px;
 }
 
-/* actual image inside container (matches JSX .main-img) */
-.place-card .main-img {
-  height: 100%;
+/* main image */
+.main-img {
   width: 100%;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
 
-/* right-side info (wraps title, paragraphs, links) */
-.place-card .info-container {
-  display: block;
-  color: #2B283A;
-  max-width: 760px;
+/* right side info */
+.place-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 650px;
 }
 
-/* country label */
-.info-container span.country {
+/* top row with marker + country + link */
+.place-info-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  font-size: 0.7rem;
-  margin-right: 12px;
-  display: inline-block;
 }
 
-/* link styling */
-.info-container a {
-  color: #2B283A;
-  font-size: 0.9rem;
+.marker {
+  width: 10px;
+  flex-shrink: 0;
+}
+
+.country {
+  font-weight: 600;
+}
+
+.place-info-top a {
+  color: #918e9b;
   text-decoration: underline;
-}
-
-.info-container a:visited {
-  color: #918E9B;
+  font-size: 0.75rem;
 }
 
 /* title */
-.info-container h2.entry-title {
-  margin-top: 7px;
-  margin-bottom: 12px;
-  font-size: 1.25rem;
+.place-title {
+  margin: 4px 0 2px;
+  font-size: 1.4rem;
 }
 
-/* bold small meta line */
-.info-container p.trip-dates {
-  font-weight: bold;
-  margin: 8px 0;
+/* dates */
+.place-date {
+  margin: 4px 0;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-/* body/excerpt text */
-.info-container p.entry-text {
-  line-height: 1.5;
+/* description */
+.place-description {
+  margin: 4px 0 0;
   font-size: 0.9rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;  
-  overflow: hidden;
-  margin: 6px 0 0;
+  line-height: 1.5;
 }
+

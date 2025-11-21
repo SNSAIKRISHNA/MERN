@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <NavBar
         docs="https://react.dev/learn" // Updated to React's official docs site using the props
-        about="https://react.dev/"    //
+        about="https://react.dev/"    
         community="https://react.dev/community"
       />
       <Body />

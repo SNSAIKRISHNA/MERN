@@ -1,36 +1,34 @@
 import markerImg from "../assets/marker.png";
 
-function Places() {
+function Places(props) {
+  console.log(props);
   return (
     <article className="place-card">
+      <div className="main-img-container">
+        <img
+          className="main-img"
+          src={props.img.src}
+          alt={props.img.alt}
+        />
+      </div>
 
-    <div className="main-img-container">
-      <img
-        className="main-img"
-        src="data:image/jpeg;base64,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"
-        alt="Mountfuji"
-      />
-    </div>
-      <div>
-        <img src={markerImg} alt="Marker" />
-        <span>Japan</span>
-        <a
-          href="https://en.wikipedia.org/wiki/Japan"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View on Wikipedia
-        </a>
-        <h2>Mount Fuji</h2>
-        <p>
-          Mount Fuji is the highest mountain in Japan, standing at 3,776 meters
-          (12,389 feet). It is an active stratovolcano that last erupted in
-          1707-1708.
-        </p>
-        <p>
-          It is a popular destination for tourists and climbers, known for its
-          symmetrical cone shape and cultural significance.
-        </p>
+      <div className="info-container">
+        <div className="location-row">
+          <img className="marker" src={markerImg} alt="Marker" />
+          <span className="country">{props.country}</span>
+          
+          <a
+            href={`https://en.wikipedia.org/wiki/${props.country}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on Wikipedia
+          </a>
+        </div>
+
+        <h2 className="entry-title">{props.place}</h2>
+        <p className="trip-dates">{props.date}</p>
+        <p className="entry-text">{props.description}</p>
       </div>
     </article>
   );
