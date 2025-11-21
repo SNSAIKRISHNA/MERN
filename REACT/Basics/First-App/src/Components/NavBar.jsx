@@ -1,4 +1,4 @@
-import reactLogo from "../assets/react.svg"; 
+import reactLogo from "../assets/react.svg";
 
 //props is an object that holds the values passed from the parent component
 //In this case, the parent component is App.jsx
@@ -7,19 +7,32 @@ import reactLogo from "../assets/react.svg";
 //We use these values to set the href attribute of the anchor tags
 
 function NavBar(props) {
-    return (
-         <div className="Navbar">
-      <img src={reactLogo} className="logo react" alt="React logo" /> <h3 className="h1-sidenav"> React Facts</h3>
-     
+  function handleClick() {
+    console.log("Documentation link clicked");
+  }
+  return (
+    <div className="Navbar">
+      <img src={reactLogo} className="logo react" alt="React logo" />{" "}
+      <h3 className="h1-sidenav"> React Facts</h3>
       <div className="side-nav">
-        <p><a href={props.docs} target="_blank">Documentation</a></p>
-        <p><a href={props.about} target="_blank">About</a></p>
-        <p><a href={props.community} target="_blank">Community</a></p>
+        <p>
+          <a href={props.docs} target="_blank" onClick={handleClick}>
+            Documentation
+          </a>
+        </p>
+        <p>
+          <a href={props.about} target="_blank">
+            About
+          </a>
+        </p>
+        <p>
+          <a href={props.community} target="_blank">
+            Community
+          </a>
+        </p>
       </div>
-      </div>
-      
-    )
-
+    </div>
+  );
 }
 
-export default NavBar 
+export default NavBar;
