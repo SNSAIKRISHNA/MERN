@@ -41,8 +41,8 @@ export default function Main() {
 
       )}{" "}
 
-      // Only show Ingredients component if there are ingredients
-      
+      {/* Only show Ingredients component if there are ingredients */}
+
       {recipeShown && <Recipe />}
     </main>
   );
