@@ -1,10 +1,11 @@
 import chefs from '../assets/chef-claude-icon.png'
 
-export default function Navbar() {
+
+export default function Header() {
     return (
-        <nav className="navbar">
-            <img src={chefs} alt="Chef Claude" />
-            <h1 >Cooking AI</h1>
-        </nav>
+        <header>
+            <img src={chefs} alt="Chef Claude"/>
+            <h1>FoodieFriend AI</h1>
+        </header>
     )
 }

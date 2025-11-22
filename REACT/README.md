@@ -8,3 +8,18 @@
      * which you can then use to determine your new
      * value of state.
 */
+
+  /*<fieldset>
+          <legend>Dietary Preferences</legend>
+          <label>
+            <input type="checkbox" name="vegetarian" value="vegetarian" />
+            Vegetarian
+          </label>
+          <label>
+            <input type="checkbox" name="vegan" value="vegan" />  Vegan
+          </label>
+          <label>
+            <input type="checkbox" name="glutenFree" value="glutenFree" />
+            Gluten-Free
+          </label>
+   /*</fieldset>
