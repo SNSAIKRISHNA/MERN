@@ -7,7 +7,8 @@ they could make with some or all of those ingredients.
  The recipe can include additional ingredients they didn't mention, but try not to include too many extra ingredients.
   Format your response in markdown to make it easier to render to a web page
 `;
-const hf = new HfInference(process.env.HF_ACCESS_TOKEN);
+const hf = new HfInference(import.meta.env.VITE_HF_ACCESS_TOKEN);
+
 
 export async function getRecipeFromMistral(ingredientsArr) {
   const ingredientsString = ingredientsArr.join(", ");
