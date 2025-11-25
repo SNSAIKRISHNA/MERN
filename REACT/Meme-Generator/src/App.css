@@ -17,8 +17,8 @@ main {
     display: flex;
     align-items: center;
     height: 65px;
-    background: linear-gradient(90deg, #672280 1.18%, #A626D3 100%);
-    color: white;
+    background: linear-gradient(90deg, #222780 1.18%, #0a9aca 100%);
+    color: linear-gradient(90deg, #ffffff 1.14%, #15ffa9 100%);
     padding: 20px;
 }
 
@@ -103,4 +103,12 @@ main {
 
 .top {
     top: 0;
+}
+
+.main-div {
+    background: linear-gradient(90deg, #222780 1.18%, #0a9aca 100%);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(23, 23, 23, 0.1);
+    margin-top: 50px;
 }
